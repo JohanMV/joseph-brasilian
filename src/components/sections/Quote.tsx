@@ -29,7 +29,26 @@ export function Quote() {
     const selectedDesign = String(data.get("portfolioDesign") ?? "").trim();
     const desiredDateValue = new Date(desiredDate);
     const formattedDesiredDate = desiredDateValue.toLocaleString("es-PE", { dateStyle: "long", timeStyle: "short", hour12: true });
-    const message = `Hola RIE TATTOOS. Soy ${data.get("name")}. Quiero cotizar un tatuaje ${data.get("style")} en ${data.get("zone")}.${selectedDesign ? ` Me interesa la pieza "${selectedDesign}" del portafolio.` : ""} Mi fecha y hora preferidas son ${formattedDesiredDate}. Mi idea: ${data.get("idea")}.${referenceUrl ? ` Imagen de referencia: ${referenceUrl}.` : ""}`;
+    const name = String(data.get("name") ?? "").trim();
+    const style = String(data.get("style") ?? "").trim();
+    const zone = String(data.get("zone") ?? "").trim();
+    const idea = String(data.get("idea") ?? "").trim();
+    const formattedDate = desiredDateValue.toLocaleDateString("es-PE", { day: "numeric", month: "long" });
+    const formattedTime = desiredDateValue.toLocaleTimeString("es-PE", { hour: "numeric", minute: "2-digit", hour12: true });
+    const message = [
+      "Hola, RIE TATTOOS. Quisiera solicitar una cotizacion:",
+      "",
+      `Nombre: ${name}`,
+      `Estilo: ${style}`,
+      `Zona del cuerpo: ${zone}`,
+      `Fecha preferida: ${formattedDate}`,
+      `Hora preferida: ${formattedTime}`,
+      ...(selectedDesign ? [`Diseno del portafolio: ${selectedDesign}`] : []),
+      "",
+      "Idea del tatuaje:",
+      idea,
+      ...(referenceUrl ? ["", `Imagen de referencia: ${referenceUrl}`] : []),
+    ].join("\n");
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     setDesiredDate("");
     setDateError("");
