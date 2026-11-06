@@ -1,16 +1,7 @@
 import { useEffect } from "react";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { Navbar } from "@/components/layout";
-import type { ProductCategoryId } from "@/types";
-import { productCategories } from "../data/products";
 import { ProductCatalog } from "./ProductCatalog";
-
-function getInitialCategory(): ProductCategoryId {
-  const requested = new URLSearchParams(window.location.search).get("categoria");
-  return productCategories.some((category) => category.id === requested)
-    ? requested as ProductCategoryId
-    : "aftercare";
-}
 
 export function ProductsPage() {
   useEffect(() => {
@@ -19,16 +10,9 @@ export function ProductsPage() {
     return () => { document.title = previousTitle; };
   }, []);
 
-  const syncCategory = (category: ProductCategoryId) => {
-    const url = new URL(window.location.href);
-    if (category === "aftercare") url.searchParams.delete("categoria");
-    else url.searchParams.set("categoria", category);
-    window.history.replaceState(null, "", `${url.pathname}${url.search}`);
-  };
-
   return (
     <div className="products-page">
-      <Navbar activeItem="Fotografías" ctaLabel="Ver productos" ctaHref="/tienda#catalogo" />
+      <Navbar activeItem="Fotografías" ctaLabel="Ver fotografías" ctaHref="/tienda#catalogo" />
 
       <main>
         <section className="products-page-hero">
@@ -44,7 +28,7 @@ export function ProductsPage() {
           <div className="products-archive-heading">
             <h2 id="products-archive-title">GALERÍA</h2>
           </div>
-          <ProductCatalog context="store" initialCategory={getInitialCategory()} onCategoryChange={syncCategory} />
+          <ProductCatalog context="store" />
         </section>
       </main>
 

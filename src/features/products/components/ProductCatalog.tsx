@@ -1,13 +1,10 @@
-import { useMemo, useState } from "react";
-import { CaretRight, Package } from "@phosphor-icons/react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import type { Product, ProductCategoryId } from "@/types";
+import { useState } from "react";
+import { CaretRight } from "@phosphor-icons/react";
+import type { Product } from "@/types";
 import { productCategories } from "../data/products";
 
 interface ProductCatalogProps {
   context: "home" | "store";
-  initialCategory?: ProductCategoryId;
-  onCategoryChange?: (category: ProductCategoryId) => void;
 }
 
 function ProductImageGallery({ product }: { product: Product }) {
@@ -52,14 +49,11 @@ function ProductImageGallery({ product }: { product: Product }) {
 }
 
 function ProductCard({ product }: { product: Product }) {
-  const category = productCategories.find((item) => item.id === product.category)?.label ?? "Productos";
-
   return (
     <article className="product-card">
       <ProductImageGallery product={product} />
       <div className="product-meta">
         <div>
-          <p>{category}</p>
           <h3>{product.name}</h3>
         </div>
       </div>
@@ -67,73 +61,17 @@ function ProductCard({ product }: { product: Product }) {
   );
 }
 
-export function ProductCatalog({ context, initialCategory = "aftercare", onCategoryChange }: ProductCatalogProps) {
-  const [activeId, setActiveId] = useState<ProductCategoryId>(initialCategory);
-  const reduce = useReducedMotion();
-  const activeCategory = useMemo(
-    () => productCategories.find((category) => category.id === activeId) ?? productCategories[0],
-    [activeId],
-  );
-
-  const selectCategory = (category: ProductCategoryId) => {
-    setActiveId(category);
-    onCategoryChange?.(category);
-  };
+export function ProductCatalog({ context }: ProductCatalogProps) {
+  const photographs = productCategories.find((category) => category.id === "famosos")?.products ?? [];
 
   return (
     <div className={`product-catalog product-catalog-${context}`}>
-      <div className="product-filters" role="tablist" aria-label="Categorías de productos">
-        {productCategories.map((category) => (
-          <button
-            key={category.id}
-            id={`${context}-product-tab-${category.id}`}
-            type="button"
-            role="tab"
-            aria-selected={activeId === category.id}
-            aria-controls={`${context}-product-panel`}
-            className={activeId === category.id ? "active" : ""}
-            onClick={() => selectCategory(category.id)}
-          >
-            {category.label}
-          </button>
-        ))}
-      </div>
-
-      <div
-        id={`${context}-product-panel`}
-        className="product-panel"
-        role="tabpanel"
-        aria-labelledby={`${context}-product-tab-${activeId}`}
-      >
-        <AnimatePresence mode="wait" initial={false}>
-          {activeCategory.products.length > 0 ? (
-            <motion.div
-              className="product-grid"
-              key={activeCategory.id}
-              initial={reduce ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={reduce ? undefined : { opacity: 0, y: -8 }}
-              transition={{ duration: .32, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {activeCategory.products.slice(0, context === "home" ? 4 : undefined).map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </motion.div>
-          ) : (
-            <motion.div
-              className="products-empty"
-              key={activeCategory.id}
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={reduce ? undefined : { opacity: 0 }}
-              transition={{ duration: .25 }}
-            >
-              <Package size={34} weight="thin" aria-hidden="true" />
-              <p>Próximamente en {activeCategory.label}</p>
-              <span>Estamos preparando una selección que cumpla con el estándar del estudio.</span>
-            </motion.div>
-          )}
-        </AnimatePresence>
+      <div className="product-panel">
+        <div className="product-grid">
+          {photographs.slice(0, context === "home" ? 4 : undefined).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
