@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-main">
-        <p className="footer-brand">RIE<br /><span>TATTOOS</span></p>
+        <p className="footer-brand">JOSEPH<br /><span>BRASILIAN</span></p>
         <div className="footer-links">
           {navItems.slice(1).map(([label, href]) => <a key={href} href={href}>{label}</a>)}
         </div>
@@ -18,7 +18,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-bottom"><span>© {new Date().getFullYear()} RIE TATTOOS</span><span>Arte permanente. Decisiones conscientes.</span></div>
+      <div className="footer-bottom"><span>© {new Date().getFullYear()} Joseph Brasilian</span><span>Arte permanente. Decisiones conscientes.</span></div>
     </footer>
   );
 }

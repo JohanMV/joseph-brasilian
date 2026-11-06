@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
-import { ArrowUpRight, CaretRight, Package } from "@phosphor-icons/react";
+import { CaretRight, Package } from "@phosphor-icons/react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Product, ProductCategoryId } from "@/types";
-import { productCategories, productWhatsappNumber } from "../data/products";
+import { productCategories } from "../data/products";
 
 interface ProductCatalogProps {
   context: "home" | "store";
@@ -53,8 +53,6 @@ function ProductImageGallery({ product }: { product: Product }) {
 
 function ProductCard({ product }: { product: Product }) {
   const category = productCategories.find((item) => item.id === product.category)?.label ?? "Productos";
-  const message = `Hola RIE TATTOOS. Quiero consultar por ${product.name}.`;
-  const whatsappHref = `https://wa.me/${productWhatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <article className="product-card">
@@ -64,9 +62,6 @@ function ProductCard({ product }: { product: Product }) {
           <p>{category}</p>
           <h3>{product.name}</h3>
         </div>
-        <a href={whatsappHref} target="_blank" rel="noreferrer" aria-label={`Consultar ${product.name} por WhatsApp`}>
-          <span>Consultar</span><ArrowUpRight size={17} weight="bold" aria-hidden="true" />
-        </a>
       </div>
     </article>
   );

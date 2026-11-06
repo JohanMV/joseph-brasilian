@@ -15,7 +15,7 @@ function getInitialCategory(): ProductCategoryId {
 export function ProductsPage() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Tienda | RIE TATTOOS";
+    document.title = "Fotografías | Joseph Brasilian";
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -28,29 +28,28 @@ export function ProductsPage() {
 
   return (
     <div className="products-page">
-      <Navbar activeItem="Tienda" ctaLabel="Ver productos" ctaHref="/tienda#catalogo" />
+      <Navbar activeItem="Fotografías" ctaLabel="Ver productos" ctaHref="/tienda#catalogo" />
 
       <main>
         <section className="products-page-hero">
-          <img className="products-page-hero-image" src="/images/tienda_banner_2.webp" alt="" fetchPriority="high" />
+          <img className="products-page-hero-image" src="/images/banner_fotografias.webp" alt="" fetchPriority="high" />
           <div className="products-page-hero-content">
-            <p className="eyebrow">Selección del estudio</p>
-            <h1>CUIDADO PARA LA PIEL.<br /><span>EQUIPO PARA EL OFICIO.</span></h1>
-            <p>Artículos elegidos para acompañar el cuidado del tatuaje y el trabajo profesional.</p>
+            <p className="eyebrow">ARTE Y TRAYECTORIA</p>
+            <h1>ARTE SIN LÍMITES.<br /><span>HISTORIAS<br />SIN FIN</span></h1>
+            <p>Una trayectoria contada en imágenes: encuentros con personalidades, obras de arte y momentos de nuestra escuela.</p>
           </div>
         </section>
 
         <section id="catalogo" className="products-archive" aria-labelledby="products-archive-title">
           <div className="products-archive-heading">
-            <h2 id="products-archive-title">Catálogo</h2>
-            <p>Consulta disponibilidad directamente con el estudio.</p>
+            <h2 id="products-archive-title">GALERÍA</h2>
           </div>
           <ProductCatalog context="store" initialCategory={getInitialCategory()} onCategoryChange={syncCategory} />
         </section>
       </main>
 
       <footer className="products-page-footer">
-        <span>© {new Date().getFullYear()} RIE TATTOOS</span>
+        <span>© {new Date().getFullYear()} Joseph Brasilian</span>
         <a href="/#agenda">Reservar tatuaje <ArrowUpRight size={16} aria-hidden="true" /></a>
       </footer>
     </div>

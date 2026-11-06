@@ -39,6 +39,8 @@
   .hero-shade { background: linear-gradient(0deg, rgba(5,5,5,.97) 0%, rgba(5,5,5,.72) 53%, rgba(5,5,5,.18) 100%); }
   .hero-content { width: calc(100% - 32px); margin-top: 64px; padding: 30px 0 38px; }
   .hero h1 { margin: 14px 0 18px; font-size: clamp(4.3rem, 20.5vw, 6.5rem); line-height: .72; }
+  .hero-name-desktop { display: none; }
+  .hero-name-mobile { display: block; width: 100%; height: auto; overflow: visible; fill: transparent; stroke: rgba(242,240,235,.78); stroke-width: 2; font-family: var(--font-display); font-size: 180px; font-weight: 900; letter-spacing: -.085em; }
   .hero-copy { max-width: 340px; margin-bottom: 22px; font-size: .94rem; }
   .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
   .hero-actions .button { padding-inline: 10px; font-size: .68rem; }

@@ -27,8 +27,8 @@ export function Navbar({ activeItem, ctaLabel = "Agendar cita", ctaHref }: Navba
       scrolled ? "navbar--scrolled" : "",
       (!visible && !open) ? "navbar--hidden" : "",
     ].filter(Boolean).join(" ")}>
-      <a className="brand" href={resolveHref("#inicio")} aria-label="RIE TATTOOS, inicio">
-        <img className="brand-mark" src="/logo_rie_tattoos.webp" alt="" /><span>RIE TATTOOS</span>
+      <a className="brand" href={resolveHref("#inicio")} aria-label="Joseph Brasilian, inicio">
+        <img className="brand-mark" src="/logo_joseph_brasilian.webp" alt="" /><span>Joseph Brasilian</span>
       </a>
       <nav className="desktop-nav" aria-label="Navegación principal">
         {navItems.map(([label, href]) => (

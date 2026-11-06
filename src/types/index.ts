@@ -16,7 +16,7 @@ export interface Artist {
   image: string;
 }
 
-export type ProductCategoryId = "aftercare" | "protection" | "equipment" | "supplies";
+export type ProductCategoryId = "aftercare" | "protection" | "equipment" | "supplies" | "famosos";
 
 export interface Product {
   id: string;

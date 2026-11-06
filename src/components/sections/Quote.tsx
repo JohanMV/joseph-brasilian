@@ -36,7 +36,7 @@ export function Quote() {
     const formattedDate = desiredDateValue.toLocaleDateString("es-PE", { day: "numeric", month: "long" });
     const formattedTime = desiredDateValue.toLocaleTimeString("es-PE", { hour: "numeric", minute: "2-digit", hour12: true });
     const message = [
-      "Hola, RIE TATTOOS. Quisiera solicitar una cotizacion:",
+      "Hola, Joseph Brasilian Tattoo. Quisiera solicitar una cotizacion:",
       "",
       `Nombre: ${name}`,
       `Estilo: ${style}`,

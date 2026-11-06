@@ -4,6 +4,108 @@ export const productWhatsappNumber = "51916842610";
 
 export const productCategories: ProductCategory[] = [
   {
+  "id": "famosos",
+  "label": "Famosos",
+  "products": [
+    {
+      "id": "andrea-maestre",
+      "name": "Andrea Maestre",
+      "category": "famosos",
+      "image": "/images/fotografias/Andrea Maestre.webp",
+      "images": [
+        "/images/fotografias/Andrea Maestre.webp",
+        "/images/fotografias/Andrea Maestre 2.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Andrea Maestre",
+      "sourceUrl": ""
+    },
+    {
+      "id": "carlos-alcantara",
+      "name": "Carlos Alcántara",
+      "category": "famosos",
+      "image": "/images/fotografias/Carlos Alcántara.webp",
+      "images": [
+        "/images/fotografias/Carlos Alcántara.webp",
+        "/images/fotografias/Carlos Alcántara 2.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Carlos Alcántara",
+      "sourceUrl": ""
+    },
+    {
+      "id": "foto",
+      "name": "Fotografía",
+      "category": "famosos",
+      "image": "/images/fotografias/foto.webp",
+      "images": [
+        "/images/fotografias/foto.webp"
+      ],
+      "imageAlt": "Fotografía con Joseph Brasilian",
+      "sourceUrl": ""
+    },
+    {
+      "id": "gareca",
+      "name": "Gareca",
+      "category": "famosos",
+      "image": "/images/fotografias/Gareca.webp",
+      "images": [
+        "/images/fotografias/Gareca.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Gareca",
+      "sourceUrl": ""
+    },
+    {
+      "id": "kathie-reds",
+      "name": "Kathie Reds",
+      "category": "famosos",
+      "image": "/images/fotografias/Kathie Reds.webp",
+      "images": [
+        "/images/fotografias/Kathie Reds.webp",
+        "/images/fotografias/Kathie Reds 2.webp",
+        "/images/fotografias/Kathie Reds 3.webp",
+        "/images/fotografias/Kathie Reds 4.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Kathie Reds",
+      "sourceUrl": ""
+    },
+    {
+      "id": "keiko-fujimori",
+      "name": "Keiko Fujimori",
+      "category": "famosos",
+      "image": "/images/fotografias/Keiko Fujimori.webp",
+      "images": [
+        "/images/fotografias/Keiko Fujimori.webp",
+        "/images/fotografias/Keiko Fujimori 2.webp",
+        "/images/fotografias/Keiko Fujimori 3.webp",
+        "/images/fotografias/Keiko Fujimori 4.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Keiko Fujimori",
+      "sourceUrl": ""
+    },
+    {
+      "id": "malu-de-la-vega",
+      "name": "Malu de la Vega",
+      "category": "famosos",
+      "image": "/images/fotografias/Malu de la Vega.webp",
+      "images": [
+        "/images/fotografias/Malu de la Vega.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Malu de la Vega",
+      "sourceUrl": ""
+    },
+    {
+      "id": "rocio-miranda",
+      "name": "Rocio Miranda",
+      "category": "famosos",
+      "image": "/images/fotografias/Rocio Miranda.webp",
+      "images": [
+        "/images/fotografias/Rocio Miranda.webp"
+      ],
+      "imageAlt": "Joseph Brasilian con Rocio Miranda",
+      "sourceUrl": ""
+    }
+  ]
+},
+  {
     id: "aftercare",
     label: "Cuidado del tatuaje",
     products: [

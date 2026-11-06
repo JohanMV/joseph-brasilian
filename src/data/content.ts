@@ -9,7 +9,7 @@ export const navItems = [
   ["Estilos", "#estilos"],
   ["Estudio", "#estudio"],
   ["Cuidados", "#cuidados"],
-  ["Tienda", "/tienda"],
+  ["Fotografías", "/tienda"],
 ] as const;
 
 export const filters: TattooStyle[] = ["Todos", "Blackwork", "Fine line", "Realismo", "Geométrico", "Anime"];
@@ -23,6 +23,6 @@ export const portfolio: PortfolioPiece[] = [
 ];
 
 export const artists: Artist[] = [
-  { name: "Mateo Salazar", role: "Artista residente", styles: "Blackwork y geometría", image: "/images/tattoo-artist.jpg" },
+  { name: "Joseph Brasilian", role: "Artista residente", styles: "Blackwork y geometría", image: "/images/joseph_brasilian.webp" },
   { name: "Valeria Cruz", role: "Artista residente", styles: "Realismo y microrealismo", image: "/images/tatuadora.webp" },
 ];

@@ -4,9 +4,9 @@ import { Reveal } from "@/components/ui";
 
 const videos = [
   { id: "7666174346058140949", creator: "@gustavoink0" },
-  { id: "7499984509656435974", creator: "@uiliangarcez" },
+  { id: "7450156841767668998", creator: "@josephbrasilian" },
+  { id: "7697433939895520519", creator: "@josephbrasilian" },
   { id: "7656438649675975958", creator: "@iris.tatts_" },
-  { id: "7541212769689963782", creator: "@vagotattoo" },
   { id: "7430287010687962374", creator: "@eleven.rb" },
 ] as const;
 

@@ -28,7 +28,7 @@ export function PortfolioPage() {
 
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Portafolio completo | RIE TATTOOS";
+    document.title = "Portafolio completo | Joseph Brasilian";
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -81,7 +81,7 @@ export function PortfolioPage() {
       </main>
 
       <footer className="portfolio-page-footer">
-        <span>© {new Date().getFullYear()} RIE TATTOOS</span>
+        <span>© {new Date().getFullYear()} Joseph Brasilian</span>
         <a href="/#inicio">Volver al estudio <ArrowUpRight size={16} /></a>
       </footer>
     </div>

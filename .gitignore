@@ -47,6 +47,8 @@ temp/
 
 # Source-generation assets not used by the production build
 source-assets/
+# Original photographs: the site uses the optimized WebP versions.
+public/images/fotografias/*.png
 
 # Generated configuration artifacts
 vite.config.js
