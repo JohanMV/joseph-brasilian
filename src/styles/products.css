@@ -67,6 +67,7 @@
 }
 
 @media (max-width: 767px) {
+  .products-page-hero-image { object-position: center; }
   .products-section { padding-block: 96px 56px; }
   .products-heading > p { margin-top: 24px; }
   .product-catalog { margin-top: 42px; }
