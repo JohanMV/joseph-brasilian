@@ -13,7 +13,8 @@ export function Studio() {
         <div className="assurance-list">
           {assurances.map((item) => <div key={item}><Check size={18} weight="bold" aria-hidden="true" /><span>{item}</span></div>)}
         </div>
-        <Button href="https://www.google.com/maps/place/Av.+Angamos+Este+1993,+San+Borja+15036/@-12.112228,-77.0099085,69m/data=!3m1!1e3!4m6!3m5!1s0x9105c7e1fa3aaeab:0xd9bfd4d56db7b85!8m2!3d-12.1121046!4d-77.0097986!16s%2Fg%2F11pw3jr713?entry=ttu&g_ep=EgoyMDI2MDgzMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" variant="secondary" arrow>Visita el estudio</Button>
+        <p>Av. P.º de la República 5761, Miraflores 15047</p>
+        <Button href="https://www.google.com/maps/place/(Joseph+Brasilian+Tattoo)+Studio+de+Tatuajes+y+Escuela+Profesional+para+Tatuadores/@-12.123084,-77.0243722,2218m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9105c81b737c2d15:0x25b1c30bb2ccc173!8m2!3d-12.123084!4d-77.0243722!16s%2Fg%2F11c532f7dg?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" variant="secondary" arrow>Visita el estudio</Button>
       </Reveal>
     </section>
   );
