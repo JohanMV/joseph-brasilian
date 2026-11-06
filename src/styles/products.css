@@ -19,6 +19,7 @@
 .product-gallery-progress { position: absolute; left: 14px; right: 66px; bottom: 14px; z-index: 2; display: flex; gap: 5px; }
 .product-gallery-progress span { height: 2px; flex: 1; background: rgba(242,240,235,.28); }
 .product-gallery-progress span.active { background: #e32a35; }
+.product-gallery-counter, .product-gallery-progress { pointer-events: none; }
 @keyframes product-image-in { from { opacity: .45; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
 .product-meta { min-height: 96px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-top: 17px; border-top: 1px solid #403c39; }
 .product-meta p { margin: 0 0 8px; color: #817d78; font-size: .62rem; letter-spacing: .09em; text-transform: uppercase; }
