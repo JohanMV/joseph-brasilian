@@ -12,7 +12,7 @@ export function ProductsPage() {
 
   return (
     <div className="products-page">
-      <Navbar activeItem="Fotografías" ctaLabel="Ver fotografías" ctaHref="/tienda#catalogo" />
+      <Navbar activeItem="Fotografías" />
 
       <main>
         <section className="products-page-hero">
